@@ -1,0 +1,154 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dropdown-menu {
+    width: 100%;
+    max-height: 100px;
+    overflow: auto;
+    text-align: left;
+}
+th {
+    text-align: center !important;
+}
+.mg0 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.done-true {
+    text-decoration: line-through;
+    color: grey;
+}
+
+/* ============================ */
+.animate-repeat {
+  line-height:40px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+}
+/* ============================ */
+
+
+.scrollable {
+    max-height: 300px;
+    overflow: auto;
+}
+.myTable {
+    margin-bottom: 0px;
+    td:last-child {
+        text-align: left;
+    }
+    form input {
+        outline: none;
+        border: 0px;
+        padding: 0px;
+        background-color: #dff0d8;
+        width: 100%;
+    }
+}
+.form-group .col-sm-10 {
+    padding: 0px 15px 0px 0px;
+}
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  padding-bottom: 19px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+//.jumbotron .btn {
+//  padding: 14px 24px;
+//  font-size: 21px;
+//}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+.footer p {
+    text-align: center;
+}
+.table {
+    margin-bottom: 0px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    &-thumb {
+        background-color: rgba(100, 100, 100, 0.8);
+        border-radius: 5px;
+    }
+}

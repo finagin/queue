@@ -1,0 +1,41 @@
+<form name="myForm" role="form" class="form-horizontal">
+    <div class="form-group mg0 has-feedback"><!---->
+        <input type="text" class="form-control search-query dropdown-toggle" data-toggle="dropdown" ng-model="search.name" placeholder="Search">
+        <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="item in queue.items | filter:search:strict | orderBy:'name'">
+                <a ng-click="searcher(item.name)">{{item.name}}</a>
+            </li>
+        </ul>
+    </div>
+</form>
+<table class="table myTable">
+    <thead>
+        <tr class="info">
+            <td class="col-xs-2">#</td>
+            <td class="col-xs-10">Фамилия</td>
+        </tr>
+    </thead>
+</table>
+<div class="scrollable">
+    <table class="table table-hover table-striped myTable">
+        <tbody>
+            <tr ng-repeat="item in queue.items | filter:search:strict" class="{{item.done}}-{{archive}} animate-repeat" ng-click="item.done = !item.done; queue.$save()">
+                <td class="col-xs-2">{{ $index + 1 }}</td>
+                <td class="col-xs-10 done-{{item.done}}" ng-swipe-left="item.done = !item.done; queue.$save()">{{item.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<table class="table myTable">
+    <tfoot>
+        <tr class="success">
+            <td class="col-xs-2">{{queue.items.length+1}}</td>
+            <td class="col-xs-10">
+                <form ng-submit="addItem()">
+                    <input type="text" ng-model="name" placeholder="Добавить студента">
+                </form>
+            </td>
+        </tr>
+    </tfoot>
+</table>

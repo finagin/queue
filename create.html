@@ -1,0 +1,24 @@
+<form name="myForm" role="form">
+    <div class="form-group has-feedback" ng-class="{'has-error': myForm.subject.$invalid && !myForm.subject.$pristine}">
+        <label class="control-label" for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" class="form-control" ng-model="queue.subject" required>
+        <span ng-show="myForm.subject.$invalid && !myForm.subject.$pristine" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <span ng-show="myForm.subject.$error.required && !myForm.subject.$pristine" class="help-block">
+            Required {{myForm.subject.$pristine}}
+        </span>
+    </div>
+
+    <div class="form-group has-feedback" ng-class="{'has-error': myForm.date.$invalid && !myForm.date.$pristine}">
+        <label class="control-label" ng-dblclick="qwe()" for="date">Date</label>
+        <input type="date" id="date" name="date" class="form-control" ng-model="queue.date" required>
+        <span ng-show="myForm.date.$error.required && !myForm.date.$pristine" class="glyphicon glyphicon-remove form-control-feedback"></span>
+        <span ng-show="myForm.date.$error.required && !myForm.date.$pristine" class="help-block">
+            Required
+        </span>
+    </div>
+
+    <br>
+
+    <a href="#/" class="btn btn-default">Cancel</a>
+    <button ng-click="save()" ng-disabled="myForm.$invalid" class="btn btn-primary">Save</button>
+</form>
